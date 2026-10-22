@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1E5A84">
+<title>Godz Cafe Menü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="preload" as="video" href="assets/hero.mp4" type="video/mp4">
+<style>
+  /* Alaçatı paleti: badanalı taş beyazı, Ege mavisi panjur, turkuaz, begonvil, lavanta + logo moru/altını */
+  :root {
+    --stone: #F2F5F4;
+    --surface: #FCFDFD;
+    --line: #DCE4E6;
+    --ink: #1B2A33;
+    --muted: #5A6A73;
+    --aegean: #1E5A84;
+    --aegean-ink: #FFFFFF;
+    --shutter: #2F8597;
+    --bougain: #B4306C;
+    --lavender: #7E6CB8;
+    --olive: #677440;
+    --plum: #4A1E6B;
+    --gold: #B8913F;
+    --chip: #E6EEF1;
+    --shadow: 0 1px 2px rgb(30 90 132 / .06), 0 8px 24px rgb(30 90 132 / .07);
+    --r: 16px;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Manrope", system-ui, sans-serif;
+    background: var(--stone);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  a { color: inherit; text-decoration: none; }
+
+  .screen { display: none; min-height: 100dvh; }
+  .screen.active { display: block; animation: enter .45s cubic-bezier(.16, 1, .3, 1); }
+  @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- Dil seçici ---------- */
+  .lang {
+    display: inline-flex; padding: 3px; border-radius: 999px;
+    background: var(--chip); gap: 2px;
+  }
+  .lang button {
+    border: 0; background: transparent; padding: 6px 10px; border-radius: 999px;
+    font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--muted);
+    min-width: 38px;
+  }
+  .lang button.on { background: var(--surface); color: var(--aegean); box-shadow: var(--shadow); }
+  .on-dark .lang { background: rgb(255 255 255 / .16); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .on-dark .lang button { color: rgb(255 255 255 / .85); }
+  .on-dark .lang button.on { background: #fff; color: #1E5A84; }
+
+  /* ---------- Açılış ---------- */
+  #home { position: relative; overflow: hidden; background: #0E1920; color: #fff; }
+  #home video {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }
+  #home .scrim {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgb(14 25 32 / .55) 0%, rgb(14 25 32 / 0) 26%),
+      linear-gradient(0deg, rgb(14 25 32 / .92) 0%, rgb(14 25 32 / .55) 32%, rgb(14 25 32 / 0) 60%);
+  }
+  .home-inner {
+    position: relative; z-index: 1; min-height: 100dvh; display: flex; flex-direction: column;
+    justify-content: space-between; max-width: 520px; margin: 0 auto;
+    padding: max(16px, env(safe-area-inset-top)) 16px max(22px, env(safe-area-inset-bottom));
+  }
+  .home-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .logo-badge {
+    background: rgb(252 253 253 / .92); border-radius: 14px; padding: 8px 12px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / .18); display: inline-flex;
+  }
+  .logo-badge img { height: 44px; width: auto; display: block; }
+  .home-bottom { display: grid; gap: 14px; }
+  .welcome { margin: 0 0 4px; font-size: 15px; line-height: 1.45; color: rgb(255 255 255 / .86); max-width: 32ch; }
+  .cta {
+    display: flex; align-items: center; justify-content: space-between; width: 100%;
+    border: 0; border-radius: 999px; padding: 18px 22px 18px 26px;
+    background: #FCFDFD; color: #1E5A84; font-size: 17px; font-weight: 800;
+    box-shadow: 0 10px 30px rgb(0 0 0 / .3);
+    transition: transform .2s cubic-bezier(.16, 1, .3, 1);
+  }
+  .cta .arrow {
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    background: #1E5A84; color: #fff; font-size: 20px;
+  }
+  .cta:active, .quick a:active, .quick button:active, .tile:active { transform: scale(.97); }
+  .quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .quick a, .quick button {
+    display: grid; justify-items: center; gap: 6px; padding: 14px 4px 12px;
+    border-radius: var(--r); border: 1px solid rgb(255 255 255 / .22);
+    background: rgb(255 255 255 / .12); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    color: #fff; font-size: 12px; font-weight: 700; transition: transform .2s;
+  }
+  .quick i { font-size: 24px; }
+
+  /* ---------- Ortak başlık ---------- */
+  .bar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--stone) 88%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    padding-top: env(safe-area-inset-top);
+  }
+  .bar-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    max-width: 720px; margin: 0 auto; padding: 10px 16px;
+  }
+  .icon-btn {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
+    background: var(--surface); display: grid; place-items: center; font-size: 20px; flex: none;
+  }
+  .bar-logo { height: 30px; width: auto; }
+  .bar-title { flex: 1; min-width: 0; font-weight: 800; font-size: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+
+  /* ---------- Kategoriler ---------- */
+  .group-title { display: flex; align-items: baseline; gap: 10px; margin: 26px 2px 12px; }
+  .group-title h2 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
+  .group-title span { color: var(--muted); font-size: 13px; font-weight: 600; }
+  .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 640px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
+  .tile {
+    --c: var(--aegean);
+    position: relative; overflow: hidden; text-align: left;
+    border: 1px solid color-mix(in srgb, var(--c) 22%, var(--line));
+    background: color-mix(in srgb, var(--c) 10%, var(--surface));
+    border-radius: var(--r); padding: 14px; min-height: 112px;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+    transition: transform .2s cubic-bezier(.16, 1, .3, 1);
+  }
+  .tile.wide { grid-column: span 2; min-height: 132px; }
+  .tile .ic {
+    width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--c); color: #fff; font-size: 22px;
+  }
+  .tile .nm { font-weight: 800; font-size: 16px; line-height: 1.2; }
+  .tile .ct { color: var(--muted); font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .tile.wide .ic { width: 50px; height: 50px; font-size: 26px; }
+  .tile.wide .nm { font-size: 20px; }
+  .tile::after { /* begonvil gölgesi gibi yumuşak daire */
+    content: ""; position: absolute; right: -30px; top: -30px; width: 110px; height: 110px; border-radius: 50%;
+    background: color-mix(in srgb, var(--c) 14%, transparent); pointer-events: none;
+  }
+
+  /* ---------- Kategori içi ---------- */
+  .chips {
+    display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity;
+    padding: 2px 16px 12px; max-width: 720px; margin: 0 auto; scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; scroll-snap-align: center; display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+    padding: 8px 14px; font-size: 14px; font-weight: 700; color: var(--muted); white-space: nowrap;
+    transition: background .2s, color .2s;
+  }
+  .chip i { font-size: 16px; }
+  .chip.on { background: var(--aegean); border-color: var(--aegean); color: var(--aegean-ink); }
+
+  .cat-head { margin: 22px 2px 14px; display: flex; align-items: center; gap: 12px; }
+  .cat-head .ic {
+    width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; font-size: 24px;
+    background: color-mix(in srgb, var(--c) 16%, var(--surface)); color: var(--c);
+  }
+  .cat-head h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .cat-head p { margin: 2px 0 0; color: var(--muted); font-size: 13px; font-weight: 600; }
+
+  .items { display: grid; gap: 10px; }
+  .item {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+    padding: 15px 16px; box-shadow: var(--shadow);
+    animation: rise .5s cubic-bezier(.16, 1, .3, 1) both; animation-delay: calc(var(--i) * 35ms);
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .item .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .item h3 { margin: 0; font-size: 16px; font-weight: 800; line-height: 1.3; }
+  .item .sub { margin: 2px 0 0; font-size: 12px; color: var(--muted); font-weight: 600; }
+  .price {
+    flex: none; font-weight: 800; font-size: 16px; color: var(--aegean); white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .item .desc { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 4px 9px;
+    font-size: 12px; font-weight: 700; background: var(--chip); color: var(--ink);
+  }
+  .tag i { font-size: 14px; }
+  .tag.kcal { background: color-mix(in srgb, var(--gold) 16%, var(--surface)); color: color-mix(in srgb, var(--gold) 70%, var(--ink)); }
+  .tag.alg { background: color-mix(in srgb, var(--bougain) 11%, var(--surface)); color: color-mix(in srgb, var(--bougain) 80%, var(--ink)); }
+  .tag.ok { background: color-mix(in srgb, var(--olive) 12%, var(--surface)); color: color-mix(in srgb, var(--olive) 80%, var(--ink)); }
+
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+  .pager button {
+    display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface);
+    border-radius: var(--r); padding: 14px; font-weight: 700; font-size: 14px; text-align: left; min-width: 0;
+  }
+  .pager button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pager .next { justify-content: flex-end; text-align: right; grid-column: 2; }
+  .pager i { font-size: 18px; color: var(--aegean); flex: none; }
+
+  .note {
+    margin-top: 26px; padding: 14px 16px; border-radius: var(--r);
+    background: color-mix(in srgb, var(--lavender) 10%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--lavender) 22%, var(--line));
+    font-size: 13px; line-height: 1.55; color: var(--muted); display: flex; gap: 10px;
+  }
+  .note i { font-size: 20px; color: var(--lavender); flex: none; }
+  .foot { text-align: center; color: var(--muted); font-size: 12px; margin-top: 22px; }
+
+  /* ---------- Wi-Fi ---------- */
+  dialog {
+    border: 0; padding: 0; border-radius: 22px; width: min(92vw, 380px);
+    background: var(--surface); color: var(--ink); box-shadow: 0 24px 60px rgb(0 0 0 / .3);
+  }
+  dialog::backdrop { background: rgb(14 25 32 / .55); backdrop-filter: blur(4px); }
+  dialog[open] { animation: enter .35s cubic-bezier(.16, 1, .3, 1); }
+  .dlg { padding: 22px; }
+  .dlg-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .dlg-head .ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; font-size: 24px; background: color-mix(in srgb, var(--shutter) 16%, var(--surface)); color: var(--shutter); }
+  .dlg-head h2 { margin: 0; font-size: 20px; font-weight: 800; flex: 1; }
+  .field { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; background: var(--chip); margin-bottom: 8px; }
+  .field label { font-size: 12px; font-weight: 700; color: var(--muted); }
+  .field div { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .field strong { font-size: 17px; word-break: break-all; }
+  .copy {
+    border: 0; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 13px;
+    background: var(--aegean); color: var(--aegean-ink); flex: none; display: inline-flex; gap: 6px; align-items: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ AÇILIŞ ============ -->
+<section id="home" class="screen on-dark">
+  <video id="heroVideo" src="assets/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+  <div class="scrim"></div>
+  <div class="home-inner">
+    <div class="home-top">
+      <div class="logo-badge"><img src="assets/logo.png" alt="Godz Cafe"></div>
+      <div class="lang" data-lang></div>
+    </div>
+    <div class="home-bottom">
+      <p class="welcome" data-t="welcome"></p>
+      <button class="cta" onclick="go('#/menu')">
+        <span data-t="viewMenu"></span>
+        <span class="arrow"><i class="ph ph-arrow-right"></i></span>
+      </button>
+      <div class="quick">
+        <a id="lnkMaps" target="_blank" rel="noopener"><i class="ph ph-map-pin"></i><span data-t="location"></span></a>
+        <a id="lnkInsta" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i><span>Instagram</span></a>
+        <button type="button" onclick="openWifi()" style="border-style:solid"><i class="ph ph-wifi-high"></i><span>Wi-Fi</span></button>
+        <a id="lnkWa" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo"></i><span>WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KATEGORİLER ============ -->
+<section id="menu" class="screen">
+  <div class="bar">
+    <div class="bar-row">
+      <button class="icon-btn" onclick="go('#/')" data-aria="home"><i class="ph ph-house"></i></button>
+      <img class="bar-logo" src="assets/logo.png" alt="Godz Cafe">
+      <div class="lang" data-lang></div>
+    </div>
+  </div>
+  <div class="wrap" id="groups"></div>
+</section>
+
+<!-- ============ KATEGORİ İÇİ ============ -->
+<section id="cat" class="screen">
+  <div class="bar">
+    <div class="bar-row">
+      <button class="icon-btn" onclick="go('#/menu')" data-aria="back"><i class="ph ph-squares-four"></i></button>
+      <div class="bar-title" id="catBarTitle"></div>
+      <div class="lang" data-lang></div>
+    </div>
+    <nav class="chips" id="chips"></nav>
+  </div>
+  <div class="wrap" id="catBody"></div>
+</section>
+
+<dialog id="wifi">
+  <div class="dlg">
+    <div class="dlg-head">
+      <span class="ic"><i class="ph ph-wifi-high"></i></span>
+      <h2>Wi-Fi</h2>
+      <button class="icon-btn" onclick="wifi.close()" data-aria="close"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="field"><label data-t="network"></label><div><strong id="wifiName"></strong></div></div>
+    <div class="field"><label data-t="password"></label><div><strong id="wifiPass"></strong>
+      <button class="copy" id="copyBtn" onclick="copyPass()"><i class="ph ph-copy"></i><span data-t="copy"></span></button></div></div>
+  </div>
+</dialog>
+
+<script src="menu-data.js"></script>
+<script>
+const UI = {
+  welcome:  { tr: "Kahve, lezzet ve keyif bir arada. Hoş geldiniz.", en: "Coffee, good food and good company. Welcome.", ru: "Кофе, вкусная еда и хорошая компания. Добро пожаловать." },
+  viewMenu: { tr: "Menüyü Görüntüle", en: "View Menu", ru: "Открыть меню" },
+  location: { tr: "Konum", en: "Location", ru: "Карта" },
+  kitchen:  { tr: "Mutfak", en: "Kitchen", ru: "Кухня" },
+  drinks:   { tr: "İçecekler", en: "Drinks", ru: "Напитки" },
+  cats:     { tr: "kategori", en: "categories", ru: "категорий" },
+  items:    { tr: "ürün", en: "items", ru: "поз." },
+  noAlg:    { tr: "Alerjen içermez", en: "No major allergens", ru: "Без основных аллергенов" },
+  varies:   { tr: "Değişken", en: "Varies", ru: "Варьируется" },
+  network:  { tr: "Ağ adı", en: "Network", ru: "Сеть" },
+  password: { tr: "Şifre", en: "Password", ru: "Пароль" },
+  copy:     { tr: "Kopyala", en: "Copy", ru: "Копировать" },
+  copied:   { tr: "Kopyalandı", en: "Copied", ru: "Скопировано" },
+  home:     { tr: "Ana sayfa", en: "Home", ru: "Главная" },
+  back:     { tr: "Kategoriler", en: "Categories", ru: "Категории" },
+  close:    { tr: "Kapat", en: "Close", ru: "Закрыть" },
+  note: {
+    tr: "Kalori değerleri porsiyon başına yaklaşık değerlerdir. Gıda alerjiniz varsa lütfen siparişten önce personelimize bilgi veriniz. Fiyatlarımıza KDV dahildir.",
+    en: "Calories are approximate values per serving. If you have a food allergy, please tell our staff before ordering. Prices include VAT.",
+    ru: "Калорийность указана приблизительно на порцию. Если у вас есть пищевая аллергия, сообщите персоналу до заказа. Цены включают НДС."
+  }
+};
+const COLORS = ["--aegean", "--bougain", "--shutter", "--lavender", "--olive", "--gold", "--plum"];
+const LANGS = ["tr", "en", "ru"];
+
+let lang = (() => {
+  try { const s = localStorage.getItem("godz-lang"); if (LANGS.includes(s)) return s; } catch (e) {}
+  const n = (navigator.language || "tr").slice(0, 2);
+  return n === "ru" ? "ru" : n === "tr" ? "tr" : "en";
+})();
+
+const t = k => UI[k][lang];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const colorOf = i => `var(${COLORS[i % COLORS.length]})`;
+const price = p => `${p} ₺`;
+
+function setLang(l) {
+  lang = l;
+  try { localStorage.setItem("godz-lang", l); } catch (e) {}
+  render();
+}
+
+function renderStatic() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el => el.textContent = t(el.dataset.t));
+  document.querySelectorAll("[data-aria]").forEach(el => el.setAttribute("aria-label", t(el.dataset.aria)));
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.innerHTML = LANGS.map(l => `<button class="${l === lang ? "on" : ""}" onclick="setLang('${l}')" aria-pressed="${l === lang}">${l.toUpperCase()}</button>`).join("");
+  });
+}
+
+function renderGroups() {
+  const html = ["kitchen", "drinks"].map(g => {
+    const cats = MENU.filter(c => c.g === g);
+    return `<div class="group-title"><h2>${t(g)}</h2><span>${cats.length} ${t("cats")}</span></div>
+      <div class="tiles">${cats.map((c, i) => {
+        const idx = MENU.indexOf(c);
+        return `<button class="tile ${i === 0 ? "wide" : ""}" style="--c:${colorOf(idx)}" onclick="go('#/c/${c.id}')">
+          <span class="ic"><i class="ph ph-${c.icon}"></i></span>
+          <span><div class="nm">${esc(c.t[lang])}</div><div class="ct">${c.items.length} ${t("items")}</div></span>
+        </button>`;
+      }).join("")}</div>`;
+  }).join("");
+  document.getElementById("groups").innerHTML = html + noteHtml();
+}
+
+function noteHtml() {
+  return `<div class="note"><i class="ph ph-info"></i><span>${t("note")}</span></div>
+    <div class="foot">Godz Cafe</div>`;
+}
+
+function itemHtml(it, i) {
+  const name = it.n[lang];
+  const sub = lang !== "tr" && it.n.tr !== name ? `<p class="sub">${esc(it.n.tr)}</p>` : "";
+  const desc = it.d ? `<p class="desc">${esc(it.d[lang])}</p>` : "";
+  const kcal = `<span class="tag kcal"><i class="ph ph-fire"></i>${it.k === null ? t("varies") : `${it.k} kcal`}</span>`;
+  const algs = it.a.length
+    ? it.a.map(a => `<span class="tag alg"><i class="ph ph-warning-circle"></i>${esc(ALLERGENS[a][lang])}</span>`).join("")
+    : (it.k === null ? "" : `<span class="tag ok"><i class="ph ph-check-circle"></i>${t("noAlg")}</span>`);
+  return `<article class="item" style="--i:${i}">
+    <div class="top"><div><h3>${esc(name)}</h3>${sub}</div><span class="price">${price(it.p)}</span></div>
+    ${desc}<div class="meta">${kcal}${algs}</div></article>`;
+}
+
+let currentCat = null;
+function renderCat(id) {
+  const idx = Math.max(0, MENU.findIndex(c => c.id === id));
+  const c = MENU[idx];
+  currentCat = c.id;
+  document.getElementById("catBarTitle").textContent = c.t[lang];
+  const chips = document.getElementById("chips");
+  chips.innerHTML = MENU.map(m => `<button class="chip ${m.id === c.id ? "on" : ""}" onclick="go('#/c/${m.id}', true)"><i class="ph ph-${m.icon}"></i>${esc(m.t[lang])}</button>`).join("");
+  const on = chips.querySelector(".chip.on");
+  requestAnimationFrame(() => {
+    chips.scrollTo({ left: on.offsetLeft - chips.clientWidth / 2 + on.clientWidth / 2, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+
+  const prev = MENU[idx - 1], next = MENU[idx + 1];
+  document.getElementById("catBody").innerHTML = `
+    <div class="cat-head" style="--c:${colorOf(idx)}">
+      <span class="ic"><i class="ph ph-${c.icon}"></i></span>
+      <div><h1>${esc(c.t[lang])}</h1><p>${t(c.g)}, ${c.items.length} ${t("items")}</p></div>
+    </div>
+    <div class="items">${c.items.map(itemHtml).join("")}</div>
+    <div class="pager">
+      ${prev ? `<button onclick="go('#/c/${prev.id}', true)"><i class="ph ph-arrow-left"></i><span>${esc(prev.t[lang])}</span></button>` : ""}
+      ${next ? `<button class="next" onclick="go('#/c/${next.id}', true)"><span>${esc(next.t[lang])}</span><i class="ph ph-arrow-right"></i></button>` : ""}
+    </div>
+    ${noteHtml()}`;
+}
+
+/* ---------- Yönlendirme ---------- */
+function go(hash, replace) {
+  if (replace) { history.replaceState(null, "", hash); route(); }
+  else location.hash = hash;
+}
+function show(id) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.toggle("active", s.id === id));
+  const v = document.getElementById("heroVideo");
+  if (id === "home") v.play().catch(() => {}); else v.pause();
+}
+function route() {
+  const h = location.hash;
+  if (h.startsWith("#/c/")) {
+    const changed = currentCat !== h.slice(4);
+    renderCat(h.slice(4)); show("cat");
+    if (changed) window.scrollTo(0, 0);
+  } else if (h === "#/menu") { renderGroups(); show("menu"); window.scrollTo(0, 0); currentCat = null; }
+  else { show("home"); currentCat = null; }
+}
+function render() {
+  renderStatic();
+  const h = location.hash;
+  if (h.startsWith("#/c/")) renderCat(h.slice(4));
+  else if (h === "#/menu") renderGroups();
+}
+window.addEventListener("hashchange", route);
+
+/* Kategori içinde sağa/sola kaydırarak geçiş */
+(() => {
+  let x0 = null, y0 = 0;
+  const body = document.getElementById("catBody");
+  body.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  body.addEventListener("touchend", e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 70 || Math.abs(dy) > Math.abs(dx) * 0.6) return;
+    const i = MENU.findIndex(c => c.id === currentCat) + (dx < 0 ? 1 : -1);
+    if (MENU[i]) go(`#/c/${MENU[i].id}`, true);
+  });
+})();
+
+/* ---------- Butonlar ---------- */
+document.getElementById("lnkMaps").href = CONFIG.mapsUrl;
+document.getElementById("lnkInsta").href = CONFIG.instagramUrl;
+document.getElementById("lnkWa").href = `https://wa.me/${CONFIG.whatsappNumber}`;
+const wifi = document.getElementById("wifi");
+document.getElementById("wifiName").textContent = CONFIG.wifiName;
+document.getElementById("wifiPass").textContent = CONFIG.wifiPassword;
+wifi.addEventListener("click", e => { if (e.target === wifi) wifi.close(); });
+function openWifi() { renderStatic(); wifi.showModal(); }
+async function copyPass() {
+  const btn = document.getElementById("copyBtn").querySelector("span");
+  try { await navigator.clipboard.writeText(CONFIG.wifiPassword); }
+  catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("wifiPass"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    try { document.execCommand("copy"); } catch (_) {}
+  }
+  btn.textContent = t("copied");
+  setTimeout(() => btn.textContent = t("copy"), 1600);
+}
+
+renderStatic();
+route();
+</script>
+</body>
+</html>
