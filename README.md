@@ -6,22 +6,40 @@ Türkçe / English / Русский QR menü. Açılışta video, kategoriler, k
 
 | Dosya | Ne işe yarar |
 |---|---|
-| `index.html` | Menü sayfası (tasarım ve çalışma mantığı) |
-| `menu-data.js` | Ürünler, fiyatlar, kaloriler, alerjenler, iletişim bilgileri |
+| `index.html` | Müşterinin gördüğü menü |
+| `admin.html` | Yönetim paneli (ürün, fiyat, fotoğraf, kategori, iletişim bilgileri) |
+| `menu.json` | Bütün menü verisi. Yönetim paneli bu dosyayı düzenler |
 | `assets/hero.mp4` | Açılış videosu |
 | `assets/logo.png` | Logo |
+| `assets/products/` | Ürün fotoğrafları (panelden yüklenir) |
 
-## Fiyat / ürün değiştirmek
+## Yönetim paneli
 
-`menu-data.js` dosyasını açın. Her ürün şu sırayla yazılır:
+Adres: `https://KULLANICI_ADI.github.io/godz-cafe-menu/admin.html`
 
-```js
-I("Türkçe ad", "English name", "Русское название", FİYAT, KALORİ, ["alerjenler"], "TR açıklama", "EN açıklama", "RU açıklama")
-```
+Panelden yapılabilenler:
+- Ürün ekleme, silme, sıralama, başka kategoriye taşıma
+- Ad ve açıklamayı TR / EN / RU düzenleme
+- Fiyatı listeden doğrudan değiştirme
+- Fotoğraf yükleme (otomatik küçültülür)
+- Kalori ve alerjen bilgisi
+- Ürünü veya kategoriyi geçici olarak gizleme (ör. tükendi)
+- Kategori ekleme, ikon seçme, sıralama
+- Maps, Instagram, WhatsApp ve Wi-Fi bilgileri (Ayarlar sekmesi)
 
-Alerjen kodları: `gluten`, `milk`, `egg`, `nuts`, `peanut`, `soy`, `sesame`, `mustard`, `celery`, `sulphite`
+Değişiklikler **Yayınla** butonuna basınca GitHub'a kaydedilir, menü 1-2 dakika içinde güncellenir.
 
-Dosyanın en üstündeki `CONFIG` kısmında Maps linki, Instagram, WhatsApp numarası ve Wi-Fi bilgileri var.
+### İlk giriş: token oluşturma
+
+Panel, GitHub'a yazabilmek için bir erişim anahtarı (token) ister:
+
+1. https://github.com/settings/personal-access-tokens/new adresini açın.
+2. **Repository access**: Only select repositories, `godz-cafe-menu` reposunu seçin.
+3. **Permissions → Repository permissions → Contents**: Read and write.
+4. Oluşturulan anahtarı panele yapıştırın. "Bu cihazda hatırla" seçiliyse bir daha sorulmaz.
+
+Token'ı kimseyle paylaşmayın. Panel adresi herkese açık olsa da token olmadan kimse değişiklik yapamaz.
+Token sadece bu repoya erişebilir, süresi dolunca aynı adımlarla yenisini oluşturun.
 
 ## GitHub Pages ile yayınlama
 

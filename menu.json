@@ -1,0 +1,1966 @@
+{
+  "config": {
+    "mapsUrl": "https://maps.google.com/?q=Godz+Cafe+Alanya",
+    "instagramUrl": "https://instagram.com/godz_alanya",
+    "whatsappNumber": "905000000000",
+    "wifiName": "GodzCafe",
+    "wifiPassword": "godz2026"
+  },
+  "allergens": {
+    "gluten": {
+      "tr": "Gluten",
+      "en": "Gluten",
+      "ru": "Глютен"
+    },
+    "milk": {
+      "tr": "Süt",
+      "en": "Milk",
+      "ru": "Молоко"
+    },
+    "egg": {
+      "tr": "Yumurta",
+      "en": "Egg",
+      "ru": "Яйцо"
+    },
+    "nuts": {
+      "tr": "Kabuklu yemiş",
+      "en": "Tree nuts",
+      "ru": "Орехи"
+    },
+    "peanut": {
+      "tr": "Yer fıstığı",
+      "en": "Peanut",
+      "ru": "Арахис"
+    },
+    "soy": {
+      "tr": "Soya",
+      "en": "Soy",
+      "ru": "Соя"
+    },
+    "sesame": {
+      "tr": "Susam",
+      "en": "Sesame",
+      "ru": "Кунжут"
+    },
+    "mustard": {
+      "tr": "Hardal",
+      "en": "Mustard",
+      "ru": "Горчица"
+    },
+    "celery": {
+      "tr": "Kereviz",
+      "en": "Celery",
+      "ru": "Сельдерей"
+    },
+    "sulphite": {
+      "tr": "Sülfit",
+      "en": "Sulphites",
+      "ru": "Сульфиты"
+    }
+  },
+  "categories": [
+    {
+      "id": "kahvalti",
+      "g": "kitchen",
+      "icon": "egg",
+      "t": {
+        "tr": "Kahvaltılar",
+        "en": "Breakfast",
+        "ru": "Завтраки"
+      },
+      "items": [
+        {
+          "id": "karisik-omlet",
+          "n": {
+            "tr": "Karışık Omlet",
+            "en": "Mixed Omelette",
+            "ru": "Омлет ассорти"
+          },
+          "d": {
+            "tr": "Mantar, yeşil biber, sucuk, sosis, taze kaşar, mevsim yeşillikleri ile",
+            "en": "Mushrooms, green pepper, sucuk (Turkish sausage), sausage, fresh kashar cheese and seasonal greens",
+            "ru": "Грибы, зелёный перец, суджук, сосиски, свежий сыр кашар и сезонная зелень"
+          },
+          "p": 245,
+          "k": 520,
+          "a": [
+            "egg",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sade-omlet",
+          "n": {
+            "tr": "Sade Omlet",
+            "en": "Plain Omelette",
+            "ru": "Омлет классический"
+          },
+          "d": {
+            "tr": "3 adet yumurta, mevsim yeşillikleri ile",
+            "en": "3 eggs with seasonal greens",
+            "ru": "3 яйца с сезонной зеленью"
+          },
+          "p": 225,
+          "k": 290,
+          "a": [
+            "egg",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sucuklu-yumurta",
+          "n": {
+            "tr": "Sucuklu Yumurta",
+            "en": "Eggs with Sucuk",
+            "ru": "Яичница с суджуком"
+          },
+          "d": {
+            "tr": "Tereyağında 3 göz yumurta ve sucuk dilimleri",
+            "en": "3 sunny-side-up eggs and sucuk slices cooked in butter",
+            "ru": "3 яйца-глазуньи и ломтики суджука на сливочном масле"
+          },
+          "p": 245,
+          "k": 540,
+          "a": [
+            "egg",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sahanda-goz-yumurta",
+          "n": {
+            "tr": "Sahanda Göz Yumurta",
+            "en": "Fried Eggs",
+            "ru": "Яичница-глазунья"
+          },
+          "d": {
+            "tr": "Tereyağında 3 göz yumurta",
+            "en": "3 sunny-side-up eggs cooked in butter",
+            "ru": "3 яйца-глазуньи на сливочном масле"
+          },
+          "p": 175,
+          "k": 300,
+          "a": [
+            "egg",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "menemen",
+          "n": {
+            "tr": "Menemen",
+            "en": "Menemen",
+            "ru": "Менемен"
+          },
+          "d": {
+            "tr": "Tereyağında 3 yumurta, yeşil biber ve kabuğu soyulmuş domates",
+            "en": "3 eggs scrambled in butter with green pepper and peeled tomatoes",
+            "ru": "3 яйца на сливочном масле с зелёным перцем и очищенными томатами"
+          },
+          "p": 245,
+          "k": 340,
+          "a": [
+            "egg",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "karisik-tost",
+          "n": {
+            "tr": "Karışık Tost",
+            "en": "Mixed Toastie",
+            "ru": "Тост ассорти"
+          },
+          "d": {
+            "tr": "Tek katlı Ayvalık tost ekmeği, sucuk dilimleri, taze kaşar peyniri, mini salata ve patates cips ile",
+            "en": "Ayvalık toast bread, sucuk slices and fresh kashar cheese, served with a side salad and fries",
+            "ru": "Айвалыкский тост с суджуком и свежим сыром кашар, мини-салат и картофель фри"
+          },
+          "p": 275,
+          "k": 690,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "kasarli-tost",
+          "n": {
+            "tr": "Kaşarlı Tost",
+            "en": "Cheese Toastie",
+            "ru": "Тост с сыром"
+          },
+          "d": {
+            "tr": "Tek katlı Ayvalık tost ekmeği, taze kaşar peyniri, mini salata ve patates cips ile",
+            "en": "Ayvalık toast bread with fresh kashar cheese, served with a side salad and fries",
+            "ru": "Айвалыкский тост со свежим сыром кашар, мини-салат и картофель фри"
+          },
+          "p": 245,
+          "k": 610,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "gunun-corbasi",
+          "n": {
+            "tr": "Günün Çorbası",
+            "en": "Soup of the Day",
+            "ru": "Суп дня"
+          },
+          "d": {
+            "tr": "Günün çorbası ve alerjen bilgisi için garsonumuza danışabilirsiniz.",
+            "en": "Please ask your server about today's soup and its allergens.",
+            "ru": "Уточните суп дня и аллергены у официанта."
+          },
+          "p": 225,
+          "k": null,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "burger",
+      "g": "kitchen",
+      "icon": "hamburger",
+      "t": {
+        "tr": "Burgerler",
+        "en": "Burgers",
+        "ru": "Бургеры"
+      },
+      "items": [
+        {
+          "id": "cheeseburger",
+          "n": {
+            "tr": "Cheeseburger",
+            "en": "Cheeseburger",
+            "ru": "Чизбургер"
+          },
+          "d": {
+            "tr": "Burger köftesi, cheddar peyniri, karamelize soğan, ince kesilmiş marul, domates, turşu ve patates cips ile",
+            "en": "Beef patty, cheddar, caramelised onion, shredded lettuce, tomato and pickles, served with fries",
+            "ru": "Говяжья котлета, чеддер, карамелизированный лук, салат, томат и маринованные огурцы, картофель фри"
+          },
+          "p": 415,
+          "k": 980,
+          "a": [
+            "gluten",
+            "milk",
+            "sesame",
+            "mustard"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "hamburger",
+          "n": {
+            "tr": "Hamburger",
+            "en": "Hamburger",
+            "ru": "Гамбургер"
+          },
+          "d": {
+            "tr": "Burger köftesi, ince kesilmiş marul, domates, turşu ve patates cips ile",
+            "en": "Beef patty, shredded lettuce, tomato and pickles, served with fries",
+            "ru": "Говяжья котлета, салат, томат и маринованные огурцы, картофель фри"
+          },
+          "p": 395,
+          "k": 860,
+          "a": [
+            "gluten",
+            "sesame",
+            "mustard"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "g": "kitchen",
+      "icon": "pizza",
+      "t": {
+        "tr": "Pizzalar",
+        "en": "Pizzas",
+        "ru": "Пицца"
+      },
+      "items": [
+        {
+          "id": "margarita",
+          "n": {
+            "tr": "Margarita",
+            "en": "Margherita",
+            "ru": "Маргарита"
+          },
+          "d": {
+            "tr": "Kiraz domates, fesleğen, mozzarella, roka yaprakları eşliğinde",
+            "en": "Cherry tomatoes, basil and mozzarella, topped with rocket",
+            "ru": "Томаты черри, базилик, моцарелла и руккола"
+          },
+          "p": 395,
+          "k": 820,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "fume-etli-pizza",
+          "n": {
+            "tr": "Füme Etli Pizza",
+            "en": "Smoked Beef Pizza",
+            "ru": "Пицца с копчёной говядиной"
+          },
+          "d": {
+            "tr": "Dana füme eti, yeşil biber, soğan, 2 çeşit kaşar, roka yaprakları eşliğinde",
+            "en": "Smoked beef, green pepper, onion and two kinds of kashar cheese, topped with rocket",
+            "ru": "Копчёная говядина, зелёный перец, лук, два вида сыра кашар и руккола"
+          },
+          "p": 415,
+          "k": 950,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "wrap",
+      "g": "kitchen",
+      "icon": "fork-knife",
+      "t": {
+        "tr": "Wrap & Köfte",
+        "en": "Wraps & Köfte",
+        "ru": "Роллы и кёфте"
+      },
+      "items": [
+        {
+          "id": "tavuk-wrap",
+          "n": {
+            "tr": "Tavuk Wrap",
+            "en": "Chicken Wrap",
+            "ru": "Ролл с курицей"
+          },
+          "d": {
+            "tr": "Tavuk dilimleri, renkli biberler, soğan, mantar, cheddar sos ve patates cips ile",
+            "en": "Chicken strips, mixed peppers, onion, mushrooms and cheddar sauce, served with fries",
+            "ru": "Курица, разноцветный перец, лук, грибы и соус чеддер, картофель фри"
+          },
+          "p": 345,
+          "k": 720,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "et-wrap",
+          "n": {
+            "tr": "Et Wrap",
+            "en": "Beef Wrap",
+            "ru": "Ролл с говядиной"
+          },
+          "d": {
+            "tr": "Dana et dilimleri, renkli biberler, soğan, mantar, cheddar sos ve patates cips ile",
+            "en": "Beef strips, mixed peppers, onion, mushrooms and cheddar sauce, served with fries",
+            "ru": "Говядина, разноцветный перец, лук, грибы и соус чеддер, картофель фри"
+          },
+          "p": 375,
+          "k": 780,
+          "a": [
+            "gluten",
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "kasap-kofte",
+          "n": {
+            "tr": "Kasap Köfte",
+            "en": "Butcher's Köfte",
+            "ru": "Кёфте по-мясницки"
+          },
+          "d": {
+            "tr": "Kızarmış ekmek üstüne 4 adet dana köfte, soğan salatası ile",
+            "en": "4 beef meatballs on toasted bread, served with onion salad",
+            "ru": "4 говяжьи котлетки кёфте на поджаренном хлебе с луковым салатом"
+          },
+          "p": 395,
+          "k": 640,
+          "a": [
+            "gluten"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "makarna",
+      "g": "kitchen",
+      "icon": "bowl-steam",
+      "t": {
+        "tr": "Makarnalar",
+        "en": "Pasta",
+        "ru": "Паста"
+      },
+      "items": [
+        {
+          "id": "fettuccine-alfredo",
+          "n": {
+            "tr": "Fettuccine Alfredo",
+            "en": "Fettuccine Alfredo",
+            "ru": "Феттучини Альфредо"
+          },
+          "d": {
+            "tr": "Sotelenmiş tavuk dilimleri, mantar, krema sos, fesleğen sos, kekik, parmesan peyniri ile",
+            "en": "Sautéed chicken, mushrooms, cream sauce, basil sauce, thyme and parmesan",
+            "ru": "Обжаренная курица, грибы, сливочный соус, соус из базилика, тимьян и пармезан"
+          },
+          "p": 375,
+          "k": 890,
+          "a": [
+            "gluten",
+            "milk",
+            "egg",
+            "nuts"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "spaghetti-bolognese",
+          "n": {
+            "tr": "Spaghetti Bolognese",
+            "en": "Spaghetti Bolognese",
+            "ru": "Спагетти болоньезе"
+          },
+          "d": {
+            "tr": "Özel hazırlanmış bolognese sos, kıyma, parmesan peyniri ile",
+            "en": "House bolognese sauce, minced beef and parmesan",
+            "ru": "Фирменный соус болоньезе, говяжий фарш и пармезан"
+          },
+          "p": 375,
+          "k": 760,
+          "a": [
+            "gluten",
+            "milk",
+            "celery"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "salata",
+      "g": "kitchen",
+      "icon": "leaf",
+      "t": {
+        "tr": "Salatalar",
+        "en": "Salads",
+        "ru": "Салаты"
+      },
+      "items": [
+        {
+          "id": "sezar-salata",
+          "n": {
+            "tr": "Sezar Salata",
+            "en": "Caesar Salad",
+            "ru": "Салат «Цезарь»"
+          },
+          "d": {
+            "tr": "Izgarada pişirilmiş tavuk dilimleri, göbek marul, kiraz domates, kruton ekmek, parmesan sos ile",
+            "en": "Grilled chicken, romaine lettuce, cherry tomatoes, croutons and parmesan dressing",
+            "ru": "Курица на гриле, салат романо, томаты черри, крутоны и соус пармезан"
+          },
+          "p": 395,
+          "k": 560,
+          "a": [
+            "gluten",
+            "milk",
+            "egg",
+            "mustard"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "mevsim-salatasi",
+          "n": {
+            "tr": "Mevsim Salatası",
+            "en": "Seasonal Salad",
+            "ru": "Сезонный салат"
+          },
+          "d": {
+            "tr": "Roka, kabuğu soyulmuş domates, salatalık, kırmızı ve yeşil biber, beyaz peynir ile",
+            "en": "Rocket, peeled tomatoes, cucumber, red and green peppers and white cheese",
+            "ru": "Руккола, очищенные томаты, огурец, красный и зелёный перец, белый сыр"
+          },
+          "p": 295,
+          "k": 260,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "atistirmalik",
+      "g": "kitchen",
+      "icon": "cheese",
+      "t": {
+        "tr": "Atıştırmalıklar",
+        "en": "Snacks & Platters",
+        "ru": "Закуски"
+      },
+      "items": [
+        {
+          "id": "peynir-tabagi",
+          "n": {
+            "tr": "Peynir Tabağı",
+            "en": "Cheese Platter",
+            "ru": "Сырная тарелка"
+          },
+          "d": {
+            "tr": "Ezine beyaz peynir, tulum peyniri, eski kaşar, taze kaşar, üzüm, zeytin, kayısı ve kraker",
+            "en": "Ezine white cheese, tulum cheese, aged and fresh kashar, grapes, olives, apricots and crackers",
+            "ru": "Белый сыр эзине, сыр тулум, выдержанный и свежий кашар, виноград, оливки, курага и крекеры"
+          },
+          "p": 455,
+          "k": 780,
+          "a": [
+            "milk",
+            "gluten"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "soguk-et-tabagi",
+          "n": {
+            "tr": "Soğuk Et Tabağı",
+            "en": "Cold Cuts Platter",
+            "ru": "Мясная нарезка"
+          },
+          "d": {
+            "tr": "Dana füme, dana pastırma, hindi füme, dana salam",
+            "en": "Smoked beef, beef pastırma, smoked turkey and beef salami",
+            "ru": "Копчёная говядина, бастурма, копчёная индейка и говяжья салями"
+          },
+          "p": 495,
+          "k": 620,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "kombo-tabagi",
+          "n": {
+            "tr": "Kombo Tabağı",
+            "en": "Combo Platter",
+            "ru": "Комбо-тарелка"
+          },
+          "d": {
+            "tr": "Çıtır tavuk, soğan halkası, sigara böreği, sosis, mozzarella stick, patates cips ile",
+            "en": "Crispy chicken, onion rings, sigara börek, sausages, mozzarella sticks and fries",
+            "ru": "Хрустящая курица, луковые кольца, сигара-бёрек, сосиски, палочки моцарелла и картофель фри"
+          },
+          "p": 395,
+          "k": 1150,
+          "a": [
+            "gluten",
+            "milk",
+            "egg"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "patates-cips",
+          "n": {
+            "tr": "Patates Cips",
+            "en": "French Fries",
+            "ru": "Картофель фри"
+          },
+          "d": {
+            "tr": "Günlük hazırlanan, elde soyulup doğranan taze patatesler",
+            "en": "Fresh potatoes, hand-peeled and cut every day",
+            "ru": "Свежий картофель, очищенный и нарезанный вручную каждый день"
+          },
+          "p": 275,
+          "k": 480,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "meyve-tabagi",
+          "n": {
+            "tr": "Meyve Tabağı",
+            "en": "Fruit Platter",
+            "ru": "Фруктовая тарелка"
+          },
+          "d": {
+            "tr": "Elma, portakal, üzüm, mevsime göre karpuz ve kavun",
+            "en": "Apple, orange and grapes, with watermelon and melon in season",
+            "ru": "Яблоко, апельсин, виноград, по сезону арбуз и дыня"
+          },
+          "p": 345,
+          "k": 280,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "karisik-cerez-tabagi",
+          "n": {
+            "tr": "Karışık Çerez Tabağı",
+            "en": "Mixed Nuts Platter",
+            "ru": "Ассорти орехов"
+          },
+          "d": {
+            "tr": "Karışık kavrulmuş kuruyemiş",
+            "en": "Assorted roasted nuts",
+            "ru": "Ассорти жареных орехов"
+          },
+          "p": 295,
+          "k": 650,
+          "a": [
+            "nuts",
+            "peanut"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "sicak-kahve",
+      "g": "drinks",
+      "icon": "coffee",
+      "t": {
+        "tr": "Sıcak Kahveler",
+        "en": "Hot Coffees",
+        "ru": "Горячий кофе"
+      },
+      "items": [
+        {
+          "id": "americano",
+          "n": {
+            "tr": "Americano",
+            "en": "Americano",
+            "ru": "Американо"
+          },
+          "d": null,
+          "p": 145,
+          "k": 10,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cafe-latte",
+          "n": {
+            "tr": "Cafe Latte",
+            "en": "Caffè Latte",
+            "ru": "Кафе латте"
+          },
+          "d": null,
+          "p": 185,
+          "k": 190,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "white-chocolate-latte",
+          "n": {
+            "tr": "White Chocolate Latte",
+            "en": "White Chocolate Latte",
+            "ru": "Латте с белым шоколадом"
+          },
+          "d": null,
+          "p": 195,
+          "k": 330,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cappuccino",
+          "n": {
+            "tr": "Cappuccino",
+            "en": "Cappuccino",
+            "ru": "Капучино"
+          },
+          "d": null,
+          "p": 185,
+          "k": 130,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "flat-white",
+          "n": {
+            "tr": "Flat White",
+            "en": "Flat White",
+            "ru": "Флэт уайт"
+          },
+          "d": null,
+          "p": 185,
+          "k": 120,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "macchiato",
+          "n": {
+            "tr": "Macchiato",
+            "en": "Macchiato",
+            "ru": "Макиато"
+          },
+          "d": null,
+          "p": 185,
+          "k": 25,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "espresso",
+          "n": {
+            "tr": "Espresso",
+            "en": "Espresso",
+            "ru": "Эспрессо"
+          },
+          "d": null,
+          "p": 95,
+          "k": 5,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "duble-espresso",
+          "n": {
+            "tr": "Duble Espresso",
+            "en": "Double Espresso",
+            "ru": "Двойной эспрессо"
+          },
+          "d": null,
+          "p": 125,
+          "k": 10,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "turk-kahvesi",
+          "n": {
+            "tr": "Türk Kahvesi",
+            "en": "Turkish Coffee",
+            "ru": "Турецкий кофе"
+          },
+          "d": null,
+          "p": 95,
+          "k": 10,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "duble-turk-kahvesi",
+          "n": {
+            "tr": "Duble Türk Kahvesi",
+            "en": "Double Turkish Coffee",
+            "ru": "Двойной турецкий кофе"
+          },
+          "d": null,
+          "p": 125,
+          "k": 20,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "vanilya-latte",
+          "n": {
+            "tr": "Vanilya Latte",
+            "en": "Vanilla Latte",
+            "ru": "Ванильный латте"
+          },
+          "d": null,
+          "p": 195,
+          "k": 250,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "karamel-latte",
+          "n": {
+            "tr": "Karamel Latte",
+            "en": "Caramel Latte",
+            "ru": "Карамельный латте"
+          },
+          "d": null,
+          "p": 195,
+          "k": 260,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cortado",
+          "n": {
+            "tr": "Cortado",
+            "en": "Cortado",
+            "ru": "Кортадо"
+          },
+          "d": null,
+          "p": 175,
+          "k": 60,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ristretto",
+          "n": {
+            "tr": "Ristretto",
+            "en": "Ristretto",
+            "ru": "Ристретто"
+          },
+          "d": null,
+          "p": 95,
+          "k": 5,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "mocha",
+          "n": {
+            "tr": "Mocha",
+            "en": "Mocha",
+            "ru": "Мокко"
+          },
+          "d": null,
+          "p": 195,
+          "k": 290,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "soguk-kahve",
+      "g": "drinks",
+      "icon": "coffee-bean",
+      "t": {
+        "tr": "Soğuk Kahveler",
+        "en": "Iced Coffees",
+        "ru": "Холодный кофе"
+      },
+      "items": [
+        {
+          "id": "ice-americano",
+          "n": {
+            "tr": "Ice Americano",
+            "en": "Iced Americano",
+            "ru": "Айс американо"
+          },
+          "d": null,
+          "p": 155,
+          "k": 10,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-latte",
+          "n": {
+            "tr": "Ice Latte",
+            "en": "Iced Latte",
+            "ru": "Айс латте"
+          },
+          "d": null,
+          "p": 185,
+          "k": 150,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-white-chocolate-mocha",
+          "n": {
+            "tr": "Ice White Chocolate Mocha",
+            "en": "Iced White Chocolate Mocha",
+            "ru": "Айс мокко с белым шоколадом"
+          },
+          "d": null,
+          "p": 215,
+          "k": 340,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-cappuccino",
+          "n": {
+            "tr": "Ice Cappuccino",
+            "en": "Iced Cappuccino",
+            "ru": "Айс капучино"
+          },
+          "d": null,
+          "p": 185,
+          "k": 120,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-vanilya-latte",
+          "n": {
+            "tr": "Ice Vanilya Latte",
+            "en": "Iced Vanilla Latte",
+            "ru": "Айс ванильный латте"
+          },
+          "d": null,
+          "p": 215,
+          "k": 220,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-karamel-latte",
+          "n": {
+            "tr": "Ice Karamel Latte",
+            "en": "Iced Caramel Latte",
+            "ru": "Айс карамельный латте"
+          },
+          "d": null,
+          "p": 215,
+          "k": 230,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-mocha",
+          "n": {
+            "tr": "Ice Mocha",
+            "en": "Iced Mocha",
+            "ru": "Айс мокко"
+          },
+          "d": null,
+          "p": 215,
+          "k": 260,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ice-bumble-coffee",
+          "n": {
+            "tr": "Ice Bumble Coffee",
+            "en": "Iced Bumble Coffee",
+            "ru": "Айс бамбл кофе"
+          },
+          "d": {
+            "tr": "Portakal suyu, karamel şurubu ve espresso",
+            "en": "Orange juice, caramel syrup and espresso",
+            "ru": "Апельсиновый сок, карамельный сироп и эспрессо"
+          },
+          "p": 255,
+          "k": 160,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "frappe",
+      "g": "drinks",
+      "icon": "drop",
+      "t": {
+        "tr": "Frappe",
+        "en": "Frappé",
+        "ru": "Фраппе"
+      },
+      "items": [
+        {
+          "id": "espresso-frappe",
+          "n": {
+            "tr": "Espresso Frappe",
+            "en": "Espresso Frappé",
+            "ru": "Эспрессо фраппе"
+          },
+          "d": null,
+          "p": 225,
+          "k": 380,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "karamel-frappe",
+          "n": {
+            "tr": "Karamel Frappe",
+            "en": "Caramel Frappé",
+            "ru": "Карамельный фраппе"
+          },
+          "d": null,
+          "p": 225,
+          "k": 420,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "vanilya-frappe",
+          "n": {
+            "tr": "Vanilya Frappe",
+            "en": "Vanilla Frappé",
+            "ru": "Ванильный фраппе"
+          },
+          "d": null,
+          "p": 225,
+          "k": 400,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cikolata-frappe",
+          "n": {
+            "tr": "Çikolata Frappe",
+            "en": "Chocolate Frappé",
+            "ru": "Шоколадный фраппе"
+          },
+          "d": null,
+          "p": 225,
+          "k": 440,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "sicak-icecek",
+      "g": "drinks",
+      "icon": "flame",
+      "t": {
+        "tr": "Sıcak İçecekler",
+        "en": "Hot Drinks",
+        "ru": "Горячие напитки"
+      },
+      "items": [
+        {
+          "id": "cay",
+          "n": {
+            "tr": "Çay",
+            "en": "Turkish Tea",
+            "ru": "Турецкий чай"
+          },
+          "d": null,
+          "p": 50,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "duble-cay",
+          "n": {
+            "tr": "Duble Çay",
+            "en": "Large Turkish Tea",
+            "ru": "Большой турецкий чай"
+          },
+          "d": null,
+          "p": 70,
+          "k": 4,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "yesil-cay",
+          "n": {
+            "tr": "Yeşil Çay",
+            "en": "Green Tea",
+            "ru": "Зелёный чай"
+          },
+          "d": null,
+          "p": 175,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ada-cayi",
+          "n": {
+            "tr": "Ada Çayı",
+            "en": "Sage Tea",
+            "ru": "Чай с шалфеем"
+          },
+          "d": null,
+          "p": 175,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ihlamur-cayi",
+          "n": {
+            "tr": "Ihlamur Çayı",
+            "en": "Linden Tea",
+            "ru": "Липовый чай"
+          },
+          "d": null,
+          "p": 175,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "kis-cayi",
+          "n": {
+            "tr": "Kış Çayı",
+            "en": "Winter Tea",
+            "ru": "Зимний чай"
+          },
+          "d": null,
+          "p": 175,
+          "k": 60,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "jasmine-cayi",
+          "n": {
+            "tr": "Jasmine Çayı",
+            "en": "Jasmine Tea",
+            "ru": "Жасминовый чай"
+          },
+          "d": null,
+          "p": 175,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "papatya-cayi",
+          "n": {
+            "tr": "Papatya Çayı",
+            "en": "Chamomile Tea",
+            "ru": "Ромашковый чай"
+          },
+          "d": null,
+          "p": 175,
+          "k": 2,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "hibiskus-cayi",
+          "n": {
+            "tr": "Hibiskus Çayı",
+            "en": "Hibiscus Tea",
+            "ru": "Чай из гибискуса"
+          },
+          "d": null,
+          "p": 175,
+          "k": 5,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sicak-sut",
+          "n": {
+            "tr": "Sıcak Süt",
+            "en": "Hot Milk",
+            "ru": "Горячее молоко"
+          },
+          "d": null,
+          "p": 75,
+          "k": 150,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sicak-cikolata",
+          "n": {
+            "tr": "Sıcak Çikolata",
+            "en": "Hot Chocolate",
+            "ru": "Горячий шоколад"
+          },
+          "d": null,
+          "p": 175,
+          "k": 340,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sicak-beyaz-cikolata",
+          "n": {
+            "tr": "Sıcak Beyaz Çikolata",
+            "en": "Hot White Chocolate",
+            "ru": "Горячий белый шоколад"
+          },
+          "d": null,
+          "p": 175,
+          "k": 380,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sahlep",
+          "n": {
+            "tr": "Sahlep",
+            "en": "Salep",
+            "ru": "Салеп"
+          },
+          "d": null,
+          "p": 175,
+          "k": 280,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "matcha",
+      "g": "drinks",
+      "icon": "plant",
+      "t": {
+        "tr": "Matcha",
+        "en": "Matcha",
+        "ru": "Матча"
+      },
+      "items": [
+        {
+          "id": "green-matcha-latte",
+          "n": {
+            "tr": "Green Matcha Latte",
+            "en": "Green Matcha Latte",
+            "ru": "Матча латте"
+          },
+          "d": null,
+          "p": 245,
+          "k": 190,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "strawberry-matcha-latte",
+          "n": {
+            "tr": "Strawberry Matcha Latte",
+            "en": "Strawberry Matcha Latte",
+            "ru": "Клубничный матча латте"
+          },
+          "d": null,
+          "p": 245,
+          "k": 230,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "blue-matcha-latte",
+          "n": {
+            "tr": "Blue Matcha Latte",
+            "en": "Blue Matcha Latte",
+            "ru": "Голубой матча латте"
+          },
+          "d": null,
+          "p": 245,
+          "k": 180,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "milkshake",
+      "g": "drinks",
+      "icon": "ice-cream",
+      "t": {
+        "tr": "Milkshake",
+        "en": "Milkshakes",
+        "ru": "Милкшейки"
+      },
+      "items": [
+        {
+          "id": "cikolatali-milkshake",
+          "n": {
+            "tr": "Çikolatalı Milkshake",
+            "en": "Chocolate Milkshake",
+            "ru": "Шоколадный милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 520,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cilekli-milkshake",
+          "n": {
+            "tr": "Çilekli Milkshake",
+            "en": "Strawberry Milkshake",
+            "ru": "Клубничный милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 460,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "vanilyali-milkshake",
+          "n": {
+            "tr": "Vanilyalı Milkshake",
+            "en": "Vanilla Milkshake",
+            "ru": "Ванильный милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 470,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "muzlu-milkshake",
+          "n": {
+            "tr": "Muzlu Milkshake",
+            "en": "Banana Milkshake",
+            "ru": "Банановый милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 480,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "karamelli-milkshake",
+          "n": {
+            "tr": "Karamelli Milkshake",
+            "en": "Caramel Milkshake",
+            "ru": "Карамельный милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 510,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "mangolu-milkshake",
+          "n": {
+            "tr": "Mangolu Milkshake",
+            "en": "Mango Milkshake",
+            "ru": "Манговый милкшейк"
+          },
+          "d": null,
+          "p": 245,
+          "k": 450,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "saglikli",
+      "g": "drinks",
+      "icon": "orange-slice",
+      "t": {
+        "tr": "Sağlıklı İçecekler",
+        "en": "Fresh Juices",
+        "ru": "Свежие соки"
+      },
+      "items": [
+        {
+          "id": "portakal-suyu",
+          "n": {
+            "tr": "Portakal Suyu",
+            "en": "Orange Juice",
+            "ru": "Апельсиновый сок"
+          },
+          "d": null,
+          "p": 195,
+          "k": 110,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "elma-suyu",
+          "n": {
+            "tr": "Elma Suyu",
+            "en": "Apple Juice",
+            "ru": "Яблочный сок"
+          },
+          "d": null,
+          "p": 245,
+          "k": 120,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "havuc-suyu",
+          "n": {
+            "tr": "Havuç Suyu",
+            "en": "Carrot Juice",
+            "ru": "Морковный сок"
+          },
+          "d": null,
+          "p": 195,
+          "k": 90,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "atom",
+          "n": {
+            "tr": "Atom",
+            "en": "Atom",
+            "ru": "Атом"
+          },
+          "d": {
+            "tr": "Muz, süt, bal ve kuruyemişle hazırlanan enerji içeceği",
+            "en": "Energy shake with banana, milk, honey and nuts",
+            "ru": "Энергетический коктейль из банана, молока, мёда и орехов"
+          },
+          "p": 355,
+          "k": 420,
+          "a": [
+            "milk",
+            "nuts"
+          ],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "limonata",
+      "g": "drinks",
+      "icon": "sun",
+      "t": {
+        "tr": "Limonatalar",
+        "en": "Lemonades",
+        "ru": "Лимонады"
+      },
+      "items": [
+        {
+          "id": "klasik-limonata",
+          "n": {
+            "tr": "Klasik Limonata",
+            "en": "Classic Lemonade",
+            "ru": "Классический лимонад"
+          },
+          "d": null,
+          "p": 195,
+          "k": 160,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cilekli-limonata",
+          "n": {
+            "tr": "Çilekli Limonata",
+            "en": "Strawberry Lemonade",
+            "ru": "Клубничный лимонад"
+          },
+          "d": null,
+          "p": 195,
+          "k": 180,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "naneli-limonata",
+          "n": {
+            "tr": "Naneli Limonata",
+            "en": "Mint Lemonade",
+            "ru": "Мятный лимонад"
+          },
+          "d": null,
+          "p": 195,
+          "k": 160,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "mojito",
+      "g": "drinks",
+      "icon": "martini",
+      "t": {
+        "tr": "Mojito",
+        "en": "Mojito",
+        "ru": "Мохито"
+      },
+      "items": [
+        {
+          "id": "klasik-mojito",
+          "n": {
+            "tr": "Klasik Mojito",
+            "en": "Classic Mojito",
+            "ru": "Классический мохито"
+          },
+          "d": null,
+          "p": 245,
+          "k": 150,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cilekli-mojito",
+          "n": {
+            "tr": "Çilekli Mojito",
+            "en": "Strawberry Mojito",
+            "ru": "Клубничный мохито"
+          },
+          "d": null,
+          "p": 245,
+          "k": 170,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "frozen",
+      "g": "drinks",
+      "icon": "snowflake",
+      "t": {
+        "tr": "Frozen",
+        "en": "Frozen",
+        "ru": "Фрозен"
+      },
+      "items": [
+        {
+          "id": "mango-frozen",
+          "n": {
+            "tr": "Mango Frozen",
+            "en": "Mango Frozen",
+            "ru": "Фрозен манго"
+          },
+          "d": null,
+          "p": 245,
+          "k": 240,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "cilek-frozen",
+          "n": {
+            "tr": "Çilek Frozen",
+            "en": "Strawberry Frozen",
+            "ru": "Фрозен клубника"
+          },
+          "d": null,
+          "p": 245,
+          "k": 220,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "arizona-dream-frozen",
+          "n": {
+            "tr": "Arizona Dream Frozen",
+            "en": "Arizona Dream Frozen",
+            "ru": "Фрозен Arizona Dream"
+          },
+          "d": null,
+          "p": 245,
+          "k": 250,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "egzotik-frozen",
+          "n": {
+            "tr": "Egzotik Frozen",
+            "en": "Exotic Frozen",
+            "ru": "Фрозен экзотик"
+          },
+          "d": null,
+          "p": 245,
+          "k": 240,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "seftali-frozen",
+          "n": {
+            "tr": "Şeftali Frozen",
+            "en": "Peach Frozen",
+            "ru": "Фрозен персик"
+          },
+          "d": null,
+          "p": 245,
+          "k": 230,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "mesrubat",
+      "g": "drinks",
+      "icon": "pint-glass",
+      "t": {
+        "tr": "Meşrubatlar",
+        "en": "Soft Drinks",
+        "ru": "Безалкогольные напитки"
+      },
+      "items": [
+        {
+          "id": "su",
+          "n": {
+            "tr": "Su",
+            "en": "Still Water",
+            "ru": "Вода"
+          },
+          "d": null,
+          "p": 45,
+          "k": 0,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "soda",
+          "n": {
+            "tr": "Soda",
+            "en": "Sparkling Water",
+            "ru": "Газированная вода"
+          },
+          "d": null,
+          "p": 75,
+          "k": 0,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "coca-cola",
+          "n": {
+            "tr": "Coca-Cola",
+            "en": "Coca-Cola",
+            "ru": "Coca-Cola"
+          },
+          "d": null,
+          "p": 145,
+          "k": 140,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "coca-cola-zero",
+          "n": {
+            "tr": "Coca-Cola Zero",
+            "en": "Coca-Cola Zero",
+            "ru": "Coca-Cola Zero"
+          },
+          "d": null,
+          "p": 145,
+          "k": 1,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "fanta",
+          "n": {
+            "tr": "Fanta",
+            "en": "Fanta",
+            "ru": "Fanta"
+          },
+          "d": null,
+          "p": 145,
+          "k": 150,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "sprite",
+          "n": {
+            "tr": "Sprite",
+            "en": "Sprite",
+            "ru": "Sprite"
+          },
+          "d": null,
+          "p": 145,
+          "k": 140,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "fuse-tea-seftali",
+          "n": {
+            "tr": "Fuse Tea Şeftali",
+            "en": "Fuse Tea Peach",
+            "ru": "Fuse Tea персик"
+          },
+          "d": null,
+          "p": 145,
+          "k": 90,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "fuse-tea-mango-ananas",
+          "n": {
+            "tr": "Fuse Tea Mango Ananas",
+            "en": "Fuse Tea Mango Pineapple",
+            "ru": "Fuse Tea манго-ананас"
+          },
+          "d": null,
+          "p": 145,
+          "k": 90,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "fuse-tea-limon",
+          "n": {
+            "tr": "Fuse Tea Limon",
+            "en": "Fuse Tea Lemon",
+            "ru": "Fuse Tea лимон"
+          },
+          "d": null,
+          "p": 145,
+          "k": 90,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "red-bull",
+          "n": {
+            "tr": "Red Bull",
+            "en": "Red Bull",
+            "ru": "Red Bull"
+          },
+          "d": null,
+          "p": 195,
+          "k": 115,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "red-bull-zero",
+          "n": {
+            "tr": "Red Bull Zero",
+            "en": "Red Bull Zero",
+            "ru": "Red Bull Zero"
+          },
+          "d": null,
+          "p": 195,
+          "k": 5,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "churchill",
+          "n": {
+            "tr": "Churchill",
+            "en": "Churchill",
+            "ru": "Черчилль"
+          },
+          "d": {
+            "tr": "Soda, taze limon ve tuz",
+            "en": "Sparkling water, fresh lemon and a pinch of salt",
+            "ru": "Газированная вода, свежий лимон и щепотка соли"
+          },
+          "p": 145,
+          "k": 15,
+          "a": [],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "ayran",
+          "n": {
+            "tr": "Ayran",
+            "en": "Ayran",
+            "ru": "Айран"
+          },
+          "d": {
+            "tr": "Geleneksel yoğurt içeceği",
+            "en": "Traditional salted yoghurt drink",
+            "ru": "Традиционный солёный йогуртовый напиток"
+          },
+          "p": 95,
+          "k": 90,
+          "a": [
+            "milk"
+          ],
+          "img": null,
+          "hidden": false
+        },
+        {
+          "id": "salgam",
+          "n": {
+            "tr": "Şalgam",
+            "en": "Şalgam",
+            "ru": "Шалгам"
+          },
+          "d": {
+            "tr": "Geleneksel fermente şalgam suyu",
+            "en": "Traditional fermented purple-carrot drink",
+            "ru": "Традиционный ферментированный напиток из чёрной моркови"
+          },
+          "p": 95,
+          "k": 25,
+          "a": [],
+          "img": null,
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}
